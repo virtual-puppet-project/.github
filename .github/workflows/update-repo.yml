@@ -1,0 +1,18 @@
+name: Update repo
+on: [workflow_dispatch]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run update script
+        shell: bash
+        run: |
+          python scripts/update.py
+
+          git config --global user.name "Tim Yuen"
+          git config --global user.email "you-win@users.noreply.github.com"
+          git commit -am "Auto-generated updates"
+
+          git push
