@@ -7,7 +7,7 @@ data/ directory.
 Expects a file called raw.json at data/raw.json
 """
 
-from enum import Enum
+import datetime
 import os
 import json
 from typing import Dict, List
@@ -132,29 +132,48 @@ def _write_str_file(path: str, data: str) -> None:
 def _generate_profile_readme(data: Data) -> str:
     r: str = ""
 
+    r += """
+<!--
+THIS FILE IS AUTO-GENERATED. ALL CHANGES MADE HERE WILL BE LOST.
+Last generated datetime (UTC): {}
+-->
+    """.format(datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")).strip()
+
+    r += "\n\n"
+
     r += "# Virtual Puppet Project\n\n"
+
+    def create_table_header() -> str:
+        r = """
+| Name | Description | Maintainer |
+| --- | --- | --- |
+        """.strip()
+        return "{}\n".format(r)
+
+    def create_table_row(l: Data.Linkable) -> str:
+        return "| [{}]({}) | {} | {} |\n".format(l.name, l.repo_url, l.description, l.maintainer)
 
     r += "## Applications\n\n"
 
-    def create_List_item(l: Data.Linkable) -> str:
-        return "* [{}]({}) - {}\n".format(l.name, l.repo_url, l.description)
-
+    r += create_table_header()
     for app in data.applications.values():
-        r += create_List_item(app)
+        r += create_table_row(app)
 
     r += "\n"
 
     r += "## Trackers\n\n"
 
+    r += create_table_header()
     for tracker in data.trackers.values():
-        r += create_List_item(tracker)
+        r += create_table_row(tracker)
 
     r += "\n"
 
     r += "## Libraries\n\n"
 
+    r += create_table_header()
     for lib in data.libraries.values():
-        r += create_List_item(lib)
+        r += create_table_row(lib)
 
     return r
 
@@ -191,6 +210,8 @@ def main() -> None:
 
     _write_json_file(
         "{}/{}".format(repo_root, AVAILABLE_TRACKERS_FILE_PATH), available_trackers)
+
+    print("Writing profile README")
 
     _write_str_file("{}/{}".format(repo_root,
                     PROFILE_README_FILE_PATH), _generate_profile_readme(data))
