@@ -10,6 +10,7 @@ Expects a file called raw.json at data/raw.json
 from enum import Enum
 import os
 import json
+from typing import Dict, List
 
 RAW_DATA_FILE_PATH: str = "/data/raw.json"
 AVAILABLE_TRACKERS_FILE_PATH: str = "/data/available_trackers.json"
@@ -24,7 +25,7 @@ class Data(object):
         display_name: str
         github_url: str
 
-    maintainers: dict[str, Maintainer]
+    maintainers: Dict[str, Maintainer]
 
     class Linkable(object):
         name: str
@@ -35,9 +36,9 @@ class Data(object):
         upstream_url: str
         maintainer: str
 
-    applications: dict[str, Linkable]
-    trackers: dict[str, Linkable]
-    libraries: dict[str, Linkable]
+    applications: Dict[str, Linkable]
+    trackers: Dict[str, Linkable]
+    libraries: Dict[str, Linkable]
 
     def __init__(self) -> None:
         self.maintainers = {}
@@ -55,7 +56,7 @@ class Data(object):
 
         return r
 
-    def parse_maintainers(self, data: list[dict[str, str]]) -> None:
+    def parse_maintainers(self, data: List[Dict[str, str]]) -> None:
         for d in data:
             m = self.Maintainer()
 
@@ -65,7 +66,7 @@ class Data(object):
 
             self.maintainers[m.username] = m
 
-    def parse_linkable(self, container: dict[str, Linkable], data: list[dict[str, str]]) -> None:
+    def parse_linkable(self, container: Dict[str, Linkable], data: List[Dict[str, str]]) -> None:
         for d in data:
             l = self.Linkable()
 
@@ -87,7 +88,7 @@ class Data(object):
             container[l.name] = l
 
 
-def _read_json_file(path: str) -> dict:
+def _read_json_file(path: str) -> Dict:
     print("Starting read for {}".format(path))
 
     f = open(path, "r")
@@ -96,7 +97,7 @@ def _read_json_file(path: str) -> dict:
 
     f.close()
 
-    if not isinstance(data, dict):
+    if not isinstance(data, Dict):
         raise Exception("Unexpected json data, expected a Dictionary")
 
     print("Finished read for {}".format(path))
@@ -104,7 +105,7 @@ def _read_json_file(path: str) -> dict:
     return data
 
 
-def _write_json_file(path: str, data: dict[str, str]) -> None:
+def _write_json_file(path: str, data: Dict[str, str]) -> None:
     print("Starting write for {}".format(path))
 
     f = open(path, "w")
@@ -135,25 +136,25 @@ def _generate_profile_readme(data: Data) -> str:
 
     r += "## Applications\n\n"
 
-    def create_list_item(l: Data.Linkable) -> str:
+    def create_List_item(l: Data.Linkable) -> str:
         return "* [{}]({}) - {}\n".format(l.name, l.repo_url, l.description)
 
     for app in data.applications.values():
-        r += create_list_item(app)
+        r += create_List_item(app)
 
     r += "\n"
 
     r += "## Trackers\n\n"
 
     for tracker in data.trackers.values():
-        r += create_list_item(tracker)
+        r += create_List_item(tracker)
 
     r += "\n"
 
     r += "## Libraries\n\n"
 
     for lib in data.libraries.values():
-        r += create_list_item(lib)
+        r += create_List_item(lib)
 
     return r
 
