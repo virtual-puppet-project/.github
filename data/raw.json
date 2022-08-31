@@ -14,7 +14,7 @@
     "applications": [
         {
             "name": "vpuppr",
-            "description": "A VTuber application that supports multiple trackers. Written with Godot.",
+            "description": "A VTuber application that supports multiple trackers. Made with Godot.",
             "repo_url": "https://github.com/virtual-puppet-project/vpuppr",
             "download_url": "",
             "maintainer": "you-win"
@@ -50,7 +50,7 @@
         },
         {
             "name": "flatpak-filepicker",
-            "description": "Exposes a native system file-picker window that is compatible with Flatpak",
+            "description": "Exposes a native system file-picker window that is compatible with the Flatpak sandbox",
             "repo_url": "https://github.com/virtual-puppet-project/flatpak-filepicker",
             "download_url": "",
             "maintainer": "orowith2os"
