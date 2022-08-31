@@ -82,8 +82,8 @@ class Data(object):
                                                   "[{}]({})".format(l.upstream_name, l.upstream_url))
             if l.maintainer in self.maintainers:
                 m: self.Maintainer = self.maintainers[l.maintainer]
-                l.maintainer = "[{}]({})".format(
-                    m.display_name, m.github_url)
+                l.maintainer = "[{}]({}) ({})".format(
+                    m.username, m.github_url, m.display_name)
 
             container[l.name] = l
 
@@ -139,9 +139,8 @@ Last generated datetime (UTC): {}
 -->
     """.format(datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")).strip()
 
-    r += "\n\n"
-
-    r += "# Virtual Puppet Project\n\n"
+    def create_newline(times: int = 1) -> str:
+        return "\n" * times
 
     def create_table_header() -> str:
         r = """
@@ -153,27 +152,57 @@ Last generated datetime (UTC): {}
     def create_table_row(l: Data.Linkable) -> str:
         return "| [{}]({}) | {} | {} |\n".format(l.name, l.repo_url, l.description, l.maintainer)
 
-    r += "## Applications\n\n"
+    r += create_newline(2)
+
+    r += "# Virtual Puppet Project"
+    r += create_newline(2)
+
+    r += "## Applications"
+    r += create_newline(2)
 
     r += create_table_header()
     for app in data.applications.values():
         r += create_table_row(app)
 
-    r += "\n"
+    r += create_newline()
 
-    r += "## Trackers\n\n"
+    r += "## Trackers"
+    r += create_newline(2)
 
     r += create_table_header()
     for tracker in data.trackers.values():
         r += create_table_row(tracker)
 
-    r += "\n"
+    r += create_newline()
 
-    r += "## Libraries\n\n"
+    r += "## Libraries"
+    r += create_newline(2)
 
     r += create_table_header()
     for lib in data.libraries.values():
         r += create_table_row(lib)
+
+    r += create_newline()
+
+    r += "---"
+    r += create_newline(2)
+
+    r += "<details>"
+    r += create_newline()
+    r += "    <summary><b>Maintainers</b></summary>"
+    r += create_newline(2)
+
+    r += "| Username | Display name |"
+    r += create_newline()
+    r += "| --- | --- |"
+    r += create_newline()
+    for m in data.maintainers.values():
+        r += "| [{}]({}) | {} |\n".format(
+            m.username, m.github_url, m.display_name)
+
+    r += create_newline()
+    r += "</details>"
+    r += create_newline()
 
     return r
 
