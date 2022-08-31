@@ -1,5 +1,19 @@
 name: Update repo
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      commit-message:
+        type: string
+        description: Text to use as the commit message
+        default: Auto-generated updates
+      display-name:
+        type: string
+        description: Name to use for the commit
+        required: true
+      user-name:
+        type: string
+        description: GitHub user name
+        required: true
 
 jobs:
   update:
@@ -11,8 +25,8 @@ jobs:
         run: |
           python scripts/update.py
 
-          git config --global user.name "Tim Yuen"
-          git config --global user.email "you-win@users.noreply.github.com"
-          git commit -am "Auto-generated updates"
+          git config --global user.name "${{ github.event.inputs.display-name }}"
+          git config --global user.email "${{ github.event.inputs.user-name }}@users.noreply.github.com"
+          git commit -am "${{ github.events.inputs.commit-message }}"
 
           git push
