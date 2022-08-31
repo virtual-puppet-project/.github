@@ -2,7 +2,7 @@
 
 ## Applications
 
-* [vpuppr](https://github.com/virtual-puppet-project/vpuppr) - VTuber application that supports multiple trackers. Written with Godot
+* [vpuppr](https://github.com/virtual-puppet-project/vpuppr) - A VTuber application that supports multiple trackers. Written with Godot.
 
 ## Trackers
 
@@ -11,5 +11,5 @@
 
 ## Libraries
 
-* [real-time-lip-sync-gd](https://github.com/virtual-puppet-project/real-time-lip-sync-gd) - A lip-sync library written in Rust
+* [real-time-lip-sync](https://github.com/virtual-puppet-project/real-time-lip-sync-gd) - A lip-sync library written in Rust
 * [flatpak-filepicker](https://github.com/virtual-puppet-project/flatpak-filepicker) - Exposes a native system file-picker window that is compatible with Flatpak
