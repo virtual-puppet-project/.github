@@ -1,6 +1,6 @@
 <!--
 THIS FILE IS AUTO-GENERATED. ALL CHANGES MADE HERE WILL BE LOST.
-Last generated datetime (UTC): 2022-08-31 22:01:20
+Last generated datetime (UTC): 2022-09-01 05:13:30
 -->
 
 # Virtual Puppet Project
@@ -10,6 +10,7 @@ Last generated datetime (UTC): 2022-08-31 22:01:20
 | Name | Description | Maintainer |
 | --- | --- | --- |
 | [vpuppr](https://github.com/virtual-puppet-project/vpuppr) | A VTuber application that supports multiple trackers. Made with Godot. | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [vpuppr-website](https://github.com/virtual-puppet-project/virtual-puppet-project-website) | A website featuring info about the program VPupPr | [omega7379](https://github.com/omega7379) (Neiro) |
 
 ## Trackers
 
@@ -34,5 +35,6 @@ Last generated datetime (UTC): 2022-08-31 22:01:20
 | --- | --- |
 | [you-win](https://github.com/you-win) | Tim Yuen |
 | [orowith2os](https://github.com/orowith2os) | Oro |
+| [omega7379](https://github.com/omega7379) | Neiro |
 
 </details>
