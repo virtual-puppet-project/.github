@@ -11,9 +11,7 @@
             "github_url": "https://github.com/orowith2os"
         },
         {
-            "username": "omega7379",
-            "display_name": "Neiro",
-            "github_url": "https://github.com/omega7379"
+            "username": "omega7379"
         }
     ],
     "applications": [
@@ -23,13 +21,6 @@
             "repo_url": "https://github.com/virtual-puppet-project/vpuppr",
             "download_url": "",
             "maintainer": "you-win"
-        },
-        {
-            "name": "vpuppr-website",
-            "description": "A website featuring info about the program VPupPr",
-            "repo_url": "https://github.com/virtual-puppet-project/virtual-puppet-project-website",
-            "download_url": "",
-            "maintainer": "Neiro"
         }
     ],
     "trackers": [

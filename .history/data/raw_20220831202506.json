@@ -23,13 +23,6 @@
             "repo_url": "https://github.com/virtual-puppet-project/vpuppr",
             "download_url": "",
             "maintainer": "you-win"
-        },
-        {
-            "name": "vpuppr-website",
-            "description": "A website featuring info about the program VPupPr",
-            "repo_url": "https://github.com/virtual-puppet-project/virtual-puppet-project-website",
-            "download_url": "",
-            "maintainer": "Neiro"
         }
     ],
     "trackers": [

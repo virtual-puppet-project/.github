@@ -29,7 +29,7 @@
             "description": "A website featuring info about the program VPupPr",
             "repo_url": "https://github.com/virtual-puppet-project/virtual-puppet-project-website",
             "download_url": "",
-            "maintainer": "Neiro"
+            "maintainer"
         }
     ],
     "trackers": [
