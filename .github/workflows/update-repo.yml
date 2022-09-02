@@ -6,14 +6,6 @@ on:
         type: string
         description: Text to use as the commit message
         default: Auto-generated updates
-      display-name:
-        type: string
-        description: Name to use for the commit
-        required: true
-      user-name:
-        type: string
-        description: GitHub user name
-        required: true
 
 jobs:
   update:
@@ -25,8 +17,8 @@ jobs:
         run: |
           python scripts/update.py
 
-          git config --global user.name "${{ github.event.inputs.display-name }}"
-          git config --global user.email "${{ github.event.inputs.user-name }}@users.noreply.github.com"
+          git config --global user.name "$(curl https://api.github.com/users/${{ github.actor }} | jq .name)"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git commit -am "${{ github.event.inputs.commit-message }}"
 
           git push
