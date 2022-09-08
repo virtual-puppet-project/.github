@@ -1,6 +1,6 @@
 <!--
 THIS FILE IS AUTO-GENERATED. ALL CHANGES MADE HERE WILL BE LOST.
-Last generated datetime (UTC): 2022-09-02 06:31:16
+Last generated datetime (UTC): 2022-09-08 20:46:48
 -->
 
 # Virtual Puppet Project
@@ -18,6 +18,7 @@ Last generated datetime (UTC): 2022-09-02 06:31:16
 | --- | --- | --- |
 | [openseeface-tracker](https://github.com/virtual-puppet-project/openseeface-tracker) | A vpuppr tracker that uses [OpenSeeFace](https://github.com/emilianavt/OpenSeeFace) | [you-win](https://github.com/you-win) (Tim Yuen) |
 | [ifacialmocap-tracker](https://github.com/virtual-puppet-project/ifacialmocap-tracker) | A vpuppr tracker that uses [iFacialMocap](https://www.ifacialmocap.com/) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [mouse-tracker](https://github.com/virtual-puppet-project/mouse-tracker) | A vpuppr tracker that uses mouse-rs via GDNative | [you-win](https://github.com/you-win) (Tim Yuen) |
 
 ## Libraries
 
