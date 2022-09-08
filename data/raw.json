@@ -50,6 +50,15 @@
             "upstream_name": "iFacialMocap",
             "upstream_url": "https://www.ifacialmocap.com/",
             "maintainer": "you-win"
+        },
+        {
+            "name": "mouse-tracker",
+            "description": "A vpuppr tracker that uses mouse-rs via GDNative",
+            "repo_url": "https://github.com/virtual-puppet-project/mouse-tracker",
+            "download_url": "",
+            "upstream_name": "mouse-rs",
+            "upstream_url": "https://github.com/AltF02/mouse-rs",
+            "maintainer": "you-win"
         }
     ],
     "libraries": [
