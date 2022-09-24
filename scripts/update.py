@@ -11,10 +11,13 @@ import datetime
 import os
 import json
 from typing import Dict, List, Union
+import yaml
 
-RAW_DATA_FILE_PATH: str = "/data/raw.json"
-AVAILABLE_TRACKERS_FILE_PATH: str = "/data/available_trackers.json"
-PROFILE_README_FILE_PATH: str = "profile/README.md"
+INPUT_DATA_FILE_PATH: str = "./data/data.yaml"
+
+RAW_DATA_FILE_PATH: str = "./data/raw.json"
+AVAILABLE_TRACKERS_FILE_PATH: str = "./data/available_trackers.json"
+PROFILE_README_FILE_PATH: str = "./profile/README.md"
 
 DATA_NOT_FOUND: str = "Data not found"
 
@@ -117,6 +120,23 @@ def _write_json_file(path: str, data: Dict[str, Union[str, Dict[str, str]]]) -> 
     print("Finished write for {}".format(path))
 
 
+def _read_yaml_file(path: str) -> Dict:
+    print("Starting read for {}".format(path))
+
+    f = open(path, "r")
+
+    data = yaml.safe_load(f)
+
+    f.close()
+
+    if not isinstance(data, Dict):
+        raise Exception("Unexpected yaml data, expected a Dictionary")
+
+    print("Finished read for {}".format(path))
+
+    return data
+
+
 def _write_str_file(path: str, data: str) -> None:
     print("Starting write for {}".format(path))
 
@@ -213,8 +233,8 @@ def main() -> None:
 
     print("Reading raw data")
 
-    raw_data = _read_json_file(
-        "{}/{}".format(repo_root, RAW_DATA_FILE_PATH))
+    raw_data = _read_yaml_file(
+        "{}/{}".format(repo_root, INPUT_DATA_FILE_PATH))
 
     for i in ["maintainers", "applications", "trackers", "libraries"]:
         if i not in raw_data:
@@ -234,6 +254,10 @@ def main() -> None:
     available_trackers = {}
     for tracker_name, tracker_data in data.trackers.items():
         available_trackers[tracker_name] = tracker_data.download_url
+
+    print("Writing raw file")
+
+    _write_json_file("{}/{}".format(repo_root, RAW_DATA_FILE_PATH), raw_data)
 
     print("Writing trackers file")
 

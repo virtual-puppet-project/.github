@@ -6,6 +6,7 @@ on:
         type: string
         description: Text to use as the commit message
         default: Auto-generated updates
+        required: true
 
 jobs:
   update:
