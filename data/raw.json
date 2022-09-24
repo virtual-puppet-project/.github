@@ -62,7 +62,7 @@
         },
         {
             "name": "MeowFace Tracker",
-            "description": "Vpuppr integration with MeowFace",
+            "description": "Vpuppr integration with $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/meowface-tracker",
             "download_url": "",
             "upstream_name": "MeowFace",
@@ -71,7 +71,7 @@
         },
         {
             "name": "VTubeStudio Tracker",
-            "description": "Vpuppr integration with VTubeStudio",
+            "description": "Vpuppr integration with $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/vtube-studio-tracker",
             "download_url": "",
             "upstream_name": "VTubeStudio",
