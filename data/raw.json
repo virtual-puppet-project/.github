@@ -21,7 +21,11 @@
             "name": "vpuppr",
             "description": "A VTuber application that supports multiple trackers. Made with Godot.",
             "repo_url": "https://github.com/virtual-puppet-project/vpuppr",
-            "download_url": "",
+            "download_url": {
+                "windows": "",
+                "linux": "",
+                "osx": ""
+            },
             "maintainer": "you-win"
         },
         {
@@ -35,7 +39,7 @@
     "trackers": [
         {
             "name": "OpenSeeFace Tracker",
-            "description": "A vpuppr tracker that uses $NAME_UPSTREAM_URL",
+            "description": "Vpuppr tracking via a webcam using $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/openseeface-tracker",
             "download_url": {
                 "windows": "",
@@ -47,8 +51,8 @@
             "maintainer": "you-win"
         },
         {
-            "name": "iFacialmocap Tracker",
-            "description": "A vpuppr tracker that uses $NAME_UPSTREAM_URL",
+            "name": "iFacialMocap Tracker",
+            "description": "Vpuppr tracking via an iOS device using $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/ifacialmocap-tracker",
             "download_url": "",
             "upstream_name": "iFacialMocap",
@@ -57,7 +61,7 @@
         },
         {
             "name": "Mouse Tracker",
-            "description": "A vpuppr tracker that uses $NAME_UPSTREAM_URL via GDNative",
+            "description": "Vpuppr tracking via a mouse using $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/mouse-tracker",
             "download_url": {
                 "windows": "",
@@ -70,7 +74,7 @@
         },
         {
             "name": "MeowFace Tracker",
-            "description": "Vpuppr integration with $NAME_UPSTREAM_URL",
+            "description": "Vpuppr tracking via an Android device using $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/meowface-tracker",
             "download_url": "",
             "upstream_name": "MeowFace",
@@ -78,8 +82,8 @@
             "maintainer": "you-win"
         },
         {
-            "name": "VTubeStudio Tracker",
-            "description": "Vpuppr integration with $NAME_UPSTREAM_URL",
+            "name": "VTubeStudio",
+            "description": "Vpuppr tracking via a mulititude of devices using $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/vtube-studio-tracker",
             "download_url": "",
             "upstream_name": "VTubeStudio",
@@ -92,14 +96,22 @@
             "name": "real-time-lip-sync",
             "description": "A lip-sync library written in Rust",
             "repo_url": "https://github.com/virtual-puppet-project/real-time-lip-sync-gd",
-            "download_url": "",
+            "download_url": {
+                "windows": "",
+                "linux": "",
+                "osx": ""
+            },
             "maintainer": "you-win"
         },
         {
             "name": "flatpak-filepicker",
-            "description": "Exposes a native system file-picker window that is compatible with the Flatpak sandbox",
+            "description": "Exposes a native system filepicker window that is compatible with the Flatpak sandbox",
             "repo_url": "https://github.com/virtual-puppet-project/flatpak-filepicker",
-            "download_url": "",
+            "download_url": {
+                "windows": "",
+                "linux": "",
+                "osx": ""
+            },
             "maintainer": "orowith2os"
         }
     ]

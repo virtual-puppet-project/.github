@@ -1,6 +1,6 @@
 <!--
 THIS FILE IS AUTO-GENERATED. ALL CHANGES MADE HERE WILL BE LOST.
-Last generated datetime (UTC): 2022-09-24 04:02:03
+Last generated datetime (UTC): 2022-09-24 14:27:52
 -->
 
 # Virtual Puppet Project
@@ -16,18 +16,18 @@ Last generated datetime (UTC): 2022-09-24 04:02:03
 
 | Name | Description | Maintainer |
 | --- | --- | --- |
-| [OpenSeeFace Tracker](https://github.com/virtual-puppet-project/openseeface-tracker) | A vpuppr tracker that uses [OpenSeeFace](https://github.com/emilianavt/OpenSeeFace) | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [iFacialmocap Tracker](https://github.com/virtual-puppet-project/ifacialmocap-tracker) | A vpuppr tracker that uses [iFacialMocap](https://www.ifacialmocap.com/) | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [Mouse Tracker](https://github.com/virtual-puppet-project/mouse-tracker) | A vpuppr tracker that uses [mouse-rs](https://github.com/AltF02/mouse-rs) via GDNative | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [MeowFace Tracker](https://github.com/virtual-puppet-project/meowface-tracker) | Vpuppr integration with [MeowFace](https://play.google.com/store/apps/details?id=com.suvidriel.meowface) | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [VTubeStudio Tracker](https://github.com/virtual-puppet-project/vtube-studio-tracker) | Vpuppr integration with [VTubeStudio](https://denchisoft.com/) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [OpenSeeFace Tracker](https://github.com/virtual-puppet-project/openseeface-tracker) | Vpuppr tracking via a webcam using [OpenSeeFace](https://github.com/emilianavt/OpenSeeFace) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [iFacialMocap Tracker](https://github.com/virtual-puppet-project/ifacialmocap-tracker) | Vpuppr tracking via an iOS device using [iFacialMocap](https://www.ifacialmocap.com/) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [Mouse Tracker](https://github.com/virtual-puppet-project/mouse-tracker) | Vpuppr tracking via a mouse using [mouse-rs](https://github.com/AltF02/mouse-rs) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [MeowFace Tracker](https://github.com/virtual-puppet-project/meowface-tracker) | Vpuppr tracking via an Android device using [MeowFace](https://play.google.com/store/apps/details?id=com.suvidriel.meowface) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [VTubeStudio](https://github.com/virtual-puppet-project/vtube-studio-tracker) | Vpuppr tracking via a mulititude of devices using [VTubeStudio](https://denchisoft.com/) | [you-win](https://github.com/you-win) (Tim Yuen) |
 
 ## Libraries
 
 | Name | Description | Maintainer |
 | --- | --- | --- |
 | [real-time-lip-sync](https://github.com/virtual-puppet-project/real-time-lip-sync-gd) | A lip-sync library written in Rust | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [flatpak-filepicker](https://github.com/virtual-puppet-project/flatpak-filepicker) | Exposes a native system file-picker window that is compatible with the Flatpak sandbox | [orowith2os](https://github.com/orowith2os) (Oro) |
+| [flatpak-filepicker](https://github.com/virtual-puppet-project/flatpak-filepicker) | Exposes a native system filepicker window that is compatible with the Flatpak sandbox | [orowith2os](https://github.com/orowith2os) (Oro) |
 
 ---
 

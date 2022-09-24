@@ -1,7 +1,15 @@
 {
-    "OpenSeeFace Tracker": "",
-    "iFacialmocap Tracker": "",
-    "Mouse Tracker": "",
+    "OpenSeeFace Tracker": {
+        "windows": "",
+        "linux": "",
+        "osx": ""
+    },
+    "iFacialMocap Tracker": "",
+    "Mouse Tracker": {
+        "windows": "",
+        "linux": "",
+        "osx": ""
+    },
     "MeowFace Tracker": "",
-    "VTubeStudio Tracker": ""
+    "VTubeStudio": ""
 }
