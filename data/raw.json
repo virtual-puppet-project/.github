@@ -53,7 +53,7 @@
         },
         {
             "name": "Mouse Tracker",
-            "description": "A vpuppr tracker that uses mouse-rs via GDNative",
+            "description": "A vpuppr tracker that uses $NAME_UPSTREAM_URL via GDNative",
             "repo_url": "https://github.com/virtual-puppet-project/mouse-tracker",
             "download_url": "",
             "upstream_name": "mouse-rs",
