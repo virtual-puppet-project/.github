@@ -37,7 +37,11 @@
             "name": "OpenSeeFace Tracker",
             "description": "A vpuppr tracker that uses $NAME_UPSTREAM_URL",
             "repo_url": "https://github.com/virtual-puppet-project/openseeface-tracker",
-            "download_url": "",
+            "download_url": {
+                "windows": "",
+                "linux": "",
+                "osx": ""
+            },
             "upstream_name": "OpenSeeFace",
             "upstream_url": "https://github.com/emilianavt/OpenSeeFace",
             "maintainer": "you-win"
@@ -55,7 +59,11 @@
             "name": "Mouse Tracker",
             "description": "A vpuppr tracker that uses $NAME_UPSTREAM_URL via GDNative",
             "repo_url": "https://github.com/virtual-puppet-project/mouse-tracker",
-            "download_url": "",
+            "download_url": {
+                "windows": "",
+                "linux": "",
+                "osx": ""
+            },
             "upstream_name": "mouse-rs",
             "upstream_url": "https://github.com/AltF02/mouse-rs",
             "maintainer": "you-win"

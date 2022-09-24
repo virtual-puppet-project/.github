@@ -10,7 +10,7 @@ Expects a file called raw.json at data/raw.json
 import datetime
 import os
 import json
-from typing import Dict, List
+from typing import Dict, List, Union
 
 RAW_DATA_FILE_PATH: str = "/data/raw.json"
 AVAILABLE_TRACKERS_FILE_PATH: str = "/data/available_trackers.json"
@@ -105,7 +105,7 @@ def _read_json_file(path: str) -> Dict:
     return data
 
 
-def _write_json_file(path: str, data: Dict[str, str]) -> None:
+def _write_json_file(path: str, data: Dict[str, Union[str, Dict[str, str]]]) -> None:
     print("Starting write for {}".format(path))
 
     f = open(path, "w")
