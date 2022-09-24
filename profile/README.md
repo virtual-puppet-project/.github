@@ -1,6 +1,6 @@
 <!--
 THIS FILE IS AUTO-GENERATED. ALL CHANGES MADE HERE WILL BE LOST.
-Last generated datetime (UTC): 2022-09-08 20:46:48
+Last generated datetime (UTC): 2022-09-24 03:50:30
 -->
 
 # Virtual Puppet Project
@@ -16,9 +16,11 @@ Last generated datetime (UTC): 2022-09-08 20:46:48
 
 | Name | Description | Maintainer |
 | --- | --- | --- |
-| [openseeface-tracker](https://github.com/virtual-puppet-project/openseeface-tracker) | A vpuppr tracker that uses [OpenSeeFace](https://github.com/emilianavt/OpenSeeFace) | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [ifacialmocap-tracker](https://github.com/virtual-puppet-project/ifacialmocap-tracker) | A vpuppr tracker that uses [iFacialMocap](https://www.ifacialmocap.com/) | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [mouse-tracker](https://github.com/virtual-puppet-project/mouse-tracker) | A vpuppr tracker that uses mouse-rs via GDNative | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [OpenSeeFace Tracker](https://github.com/virtual-puppet-project/openseeface-tracker) | A vpuppr tracker that uses [OpenSeeFace](https://github.com/emilianavt/OpenSeeFace) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [iFacialmocap Tracker](https://github.com/virtual-puppet-project/ifacialmocap-tracker) | A vpuppr tracker that uses [iFacialMocap](https://www.ifacialmocap.com/) | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [Mouse Tracker](https://github.com/virtual-puppet-project/mouse-tracker) | A vpuppr tracker that uses mouse-rs via GDNative | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [MeowFace Tracker](https://github.com/virtual-puppet-project/meowface-tracker) | Vpuppr integration with MeowFace | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [VTubeStudio Tracker](https://github.com/virtual-puppet-project/vtube-studio-tracker) | Vpuppr integration with VTubeStudio | [you-win](https://github.com/you-win) (Tim Yuen) |
 
 ## Libraries
 
