@@ -6,5 +6,5 @@ Files under `profile/` and `data/` (with the exception of `data/raw.json`) are a
 
 To run the script locally:
 ```Python
-python3 scripts/update.py
+python3 scripts/generate.py
 ```

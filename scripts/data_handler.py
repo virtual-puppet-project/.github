@@ -1,17 +1,7 @@
-#!/usr/bin/env python
-
-"""
-Script for automatically updating the github profile readme and files under the
-data/ directory.
-
-Expects a file called raw.json at data/raw.json
-"""
-
 import datetime
-import os
-import json
-from typing import Dict, List, Union
-import yaml
+from typing import Dict, List
+
+import utils
 
 INPUT_DATA_FILE_PATH: str = "./data/data.yaml"
 
@@ -89,64 +79,6 @@ class Data(object):
                     m.username, m.github_url, m.display_name)
 
             container[l.name] = l
-
-
-def _read_json_file(path: str) -> Dict:
-    print("Starting read for {}".format(path))
-
-    f = open(path, "r")
-
-    data = json.load(f)
-
-    f.close()
-
-    if not isinstance(data, Dict):
-        raise Exception("Unexpected json data, expected a Dictionary")
-
-    print("Finished read for {}".format(path))
-
-    return data
-
-
-def _write_json_file(path: str, data: Dict[str, Union[str, Dict[str, str]]]) -> None:
-    print("Starting write for {}".format(path))
-
-    f = open(path, "w")
-
-    json.dump(data, f, indent=4)
-
-    f.close()
-
-    print("Finished write for {}".format(path))
-
-
-def _read_yaml_file(path: str) -> Dict:
-    print("Starting read for {}".format(path))
-
-    f = open(path, "r")
-
-    data = yaml.safe_load(f)
-
-    f.close()
-
-    if not isinstance(data, Dict):
-        raise Exception("Unexpected yaml data, expected a Dictionary")
-
-    print("Finished read for {}".format(path))
-
-    return data
-
-
-def _write_str_file(path: str, data: str) -> None:
-    print("Starting write for {}".format(path))
-
-    f = open(path, "w")
-
-    f.write(data)
-
-    f.close()
-
-    print("Finished write for {}".format(path))
 
 
 def _generate_profile_readme(data: Data) -> str:
@@ -227,17 +159,14 @@ Last generated datetime (UTC): {}
     return r
 
 
-def main() -> None:
-    repo_root: str = "{}/../".format(
-        os.path.dirname(os.path.realpath(__file__)))
+def handle(repo_root: str) -> None:
+    print("Processing raw data")
 
-    print("Reading raw data")
-
-    raw_data = _read_yaml_file(
+    raw_data = utils.read_yaml_file(
         "{}/{}".format(repo_root, INPUT_DATA_FILE_PATH))
 
     for i in ["maintainers", "applications", "trackers", "libraries"]:
-        if i not in raw_data:
+        if not i in raw_data:
             raise Exception(
                 "No {} found, this is definitely an error".format(i))
 
@@ -245,9 +174,11 @@ def main() -> None:
 
     data.parse_maintainers(raw_data["maintainers"])
 
-    data.parse_linkable(data.applications, raw_data["applications"])
-    data.parse_linkable(data.trackers, raw_data["trackers"])
-    data.parse_linkable(data.libraries, raw_data["libraries"])
+    for a, b in [
+            (data.applications, raw_data["applications"]),
+            (data.trackers, raw_data["trackers"]),
+            (data.libraries, raw_data["libraries"])]:
+        data.parse_linkable(a, b)
 
     print("Processing trackers")
 
@@ -257,20 +188,17 @@ def main() -> None:
 
     print("Writing raw file")
 
-    _write_json_file("{}/{}".format(repo_root, RAW_DATA_FILE_PATH), raw_data)
+    utils.write_json_file(
+        "{}/{}".format(repo_root, RAW_DATA_FILE_PATH), raw_data)
 
     print("Writing trackers file")
 
-    _write_json_file(
+    utils.write_json_file(
         "{}/{}".format(repo_root, AVAILABLE_TRACKERS_FILE_PATH), available_trackers)
 
     print("Writing profile README")
 
-    _write_str_file("{}/{}".format(repo_root,
-                    PROFILE_README_FILE_PATH), _generate_profile_readme(data))
+    utils.write_str_file("{}/{}".format(repo_root,
+                                        PROFILE_README_FILE_PATH), _generate_profile_readme(data))
 
-    print("Finished!")
-
-
-if __name__ == "__main__":
-    main()
+    print("Finished processing raw data")

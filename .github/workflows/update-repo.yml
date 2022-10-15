@@ -16,7 +16,7 @@ jobs:
       - name: Run update script
         shell: bash
         run: |
-          python scripts/update.py
+          python scripts/generate.py
 
           git config --global user.name "$(curl https://api.github.com/users/${{ github.actor }} | jq .name)"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
