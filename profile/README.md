@@ -1,6 +1,6 @@
 <!--
 THIS FILE IS AUTO-GENERATED. ALL CHANGES MADE HERE WILL BE LOST.
-Last generated datetime (UTC): 2023-08-24 06:04:30
+Last generated datetime (UTC): 2023-08-24 06:07:45
 -->
 
 # Virtual Puppet Project
@@ -26,6 +26,7 @@ Last generated datetime (UTC): 2023-08-24 06:04:30
 
 | Name | Description | Maintainer |
 | --- | --- | --- |
+| [libvpuppr](https://github.com/virtual-puppet-project/libvpuppr) | The core implementation logic for vpuppr | [you-win](https://github.com/you-win) (Tim Yuen) |
 | [real-time-lip-sync](https://github.com/virtual-puppet-project/real-time-lip-sync-gd) | A lip-sync library written in Rust | [you-win](https://github.com/you-win) (Tim Yuen) |
 
 ---
