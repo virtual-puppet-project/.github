@@ -66,6 +66,11 @@ trackers:
     maintainer: you-win
 
 libraries:
+  - name: libvpuppr
+    description: The core implementation logic for vpuppr
+    repo_url: "https://github.com/virtual-puppet-project/libvpuppr"
+    download_url: ""
+    maintainer: you-win
   - name: "real-time-lip-sync"
     description: A lip-sync library written in Rust
     repo_url: "https://github.com/virtual-puppet-project/real-time-lip-sync-gd"
