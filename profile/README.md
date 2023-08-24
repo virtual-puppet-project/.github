@@ -1,6 +1,6 @@
 <!--
 THIS FILE IS AUTO-GENERATED. ALL CHANGES MADE HERE WILL BE LOST.
-Last generated datetime (UTC): 2022-10-15 22:06:44
+Last generated datetime (UTC): 2023-08-24 06:04:30
 -->
 
 # Virtual Puppet Project
@@ -9,7 +9,7 @@ Last generated datetime (UTC): 2022-10-15 22:06:44
 
 | Name | Description | Maintainer |
 | --- | --- | --- |
-| [vpuppr](https://github.com/virtual-puppet-project/vpuppr) | A VTuber application that supports multiple trackers. Made with Godot. | [you-win](https://github.com/you-win) (Tim Yuen) |
+| [vpuppr](https://github.com/virtual-puppet-project/vpuppr) | A VTuber application that supports multiple trackers. Made with Godot. Currently being rewritten for Godot 4. | [you-win](https://github.com/you-win) (Tim Yuen) |
 | [vpuppr-website](https://github.com/virtual-puppet-project/virtual-puppet-project-website) | A website featuring info about the program VPupPr | [omega7379](https://github.com/omega7379) (Neiro) |
 
 ## Trackers
@@ -27,7 +27,6 @@ Last generated datetime (UTC): 2022-10-15 22:06:44
 | Name | Description | Maintainer |
 | --- | --- | --- |
 | [real-time-lip-sync](https://github.com/virtual-puppet-project/real-time-lip-sync-gd) | A lip-sync library written in Rust | [you-win](https://github.com/you-win) (Tim Yuen) |
-| [flatpak-filepicker](https://github.com/virtual-puppet-project/flatpak-filepicker) | Exposes a native system filepicker window that is compatible with the Flatpak sandbox | [orowith2os](https://github.com/orowith2os) (Oro) |
 
 ---
 
@@ -37,7 +36,6 @@ Last generated datetime (UTC): 2022-10-15 22:06:44
 | Username | Display name |
 | --- | --- |
 | [you-win](https://github.com/you-win) | Tim Yuen |
-| [orowith2os](https://github.com/orowith2os) | Oro |
 | [omega7379](https://github.com/omega7379) | Neiro |
 
 </details>

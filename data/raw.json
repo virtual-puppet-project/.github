@@ -6,11 +6,6 @@
             "github_url": "https://github.com/you-win"
         },
         {
-            "username": "orowith2os",
-            "display_name": "Oro",
-            "github_url": "https://github.com/orowith2os"
-        },
-        {
             "username": "omega7379",
             "display_name": "Neiro",
             "github_url": "https://github.com/omega7379"
@@ -19,7 +14,7 @@
     "applications": [
         {
             "name": "vpuppr",
-            "description": "A VTuber application that supports multiple trackers. Made with Godot.",
+            "description": "A VTuber application that supports multiple trackers. Made with Godot. Currently being rewritten for Godot 4.",
             "repo_url": "https://github.com/virtual-puppet-project/vpuppr",
             "download_url": {
                 "windows": "",
@@ -102,17 +97,6 @@
                 "osx": ""
             },
             "maintainer": "you-win"
-        },
-        {
-            "name": "flatpak-filepicker",
-            "description": "Exposes a native system filepicker window that is compatible with the Flatpak sandbox",
-            "repo_url": "https://github.com/virtual-puppet-project/flatpak-filepicker",
-            "download_url": {
-                "windows": "",
-                "linux": "",
-                "osx": ""
-            },
-            "maintainer": "orowith2os"
         }
     ]
 }
