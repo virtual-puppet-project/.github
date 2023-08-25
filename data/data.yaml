@@ -3,9 +3,6 @@ maintainers:
   - username: you-win
     display_name: Tim Yuen
     github_url: "https://github.com/you-win"
-  - username: omega7379
-    display_name: Neiro
-    github_url: https://github.com/omega7379
 
 applications:
   - name: vpuppr
@@ -20,7 +17,7 @@ applications:
     description: A website featuring info about the program VPupPr
     repo_url: "https://github.com/virtual-puppet-project/virtual-puppet-project-website"
     download_url: ""
-    maintainer: omega7379
+    maintainer: you-win
 
 trackers:
   - name: OpenSeeFace Tracker
