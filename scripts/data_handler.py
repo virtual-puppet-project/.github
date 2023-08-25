@@ -96,13 +96,13 @@ Last generated datetime (UTC): {}
 
     def create_table_header() -> str:
         r = """
-| Name | Description | Maintainer |
-| --- | --- | --- |
+| Name | Description |
+| --- | --- |
         """.strip()
         return "{}\n".format(r)
 
     def create_table_row(l: Data.Linkable) -> str:
-        return "| [{}]({}) | {} | {} |\n".format(l.name, l.repo_url, l.description, l.maintainer)
+        return "| [{}]({}) | {} |\n".format(l.name, l.repo_url, l.description)
 
     r += create_newline(2)
 
@@ -137,23 +137,6 @@ Last generated datetime (UTC): {}
     r += create_newline()
 
     r += "---"
-    r += create_newline(2)
-
-    r += "<details>"
-    r += create_newline()
-    r += "    <summary><b>Maintainers</b></summary>"
-    r += create_newline(2)
-
-    r += "| Username | Display name |"
-    r += create_newline()
-    r += "| --- | --- |"
-    r += create_newline()
-    for m in data.maintainers.values():
-        r += "| [{}]({}) | {} |\n".format(
-            m.username, m.github_url, m.display_name)
-
-    r += create_newline()
-    r += "</details>"
     r += create_newline()
 
     return r
